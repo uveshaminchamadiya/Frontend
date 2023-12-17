@@ -4,14 +4,9 @@
 }
 
 .heading {
-    background-color: rgb(235, 235, 235);
-    font-size: 24px;
-    padding: 10px;
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
 }
 
 .html {
-    box-shadow: rgba(121, 243, 99, 0.25) 0px 54px 55px, rgba(121, 243, 99, 0.12) 0px -12px 30px, rgba(121, 243, 99, 0.12) 0px 4px 6px, rgba(121, 243, 99, 0.17) 0px 12px 13px, rgba(121, 243, 99, 0.09) 0px -3px 5px;
-    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
