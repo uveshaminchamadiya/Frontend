@@ -207,8 +207,8 @@
 }
 
 .section-3 {
-    background-color: #60269E;
-    height: 1030px;
+    background-image: url('img/section-3-bg.png');
+    background-size: cover;
 }
 
 .section-3 .sub-div-1 {
