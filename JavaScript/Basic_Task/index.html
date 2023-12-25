@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Program</title>
+  </head>
+  <body>
+    <!-- demo-1  -->
+    <h3>First JavaScript Program</h3>
+    <button onclick="document.getElementById('root').innerHTML='Hello World!'">
+      Click To Print Hello World
+    </button>
+    <center>
+      <p>Note: Output will be displayed below.</p>
+      <h1 id="root"></h1>
+    </center>
+    <hr />
+    <hr />
+    <!-- demo-2  -->
+    <h3>Change HTML Attribute Values Using JavaScript</h3>
+    <button
+      onclick="document.getElementById('changeValue').innerHTML='Value Changed Using JavaScript'"
+    >
+      Click To Change Value
+    </button>
+    <center><h1 id="changeValue">My Original Value</h1></center>
+    <hr><hr>
+    <!-- demo-3  -->
+    <h3>Below Is The Example Of JS Function - (Let's See)</h3>
+    <button onclick="myFunction()">Click To See Magic</button>
+    <center>
+      <p>Note: Output will be displayed below.</p>
+      <h1 id="magicDiv" style="padding: 10px"></h1>
+    </center>
+    <hr><hr>
+    <!-- demo-4  -->
+    <h3>Below Is The String in JS</h3>
+    <p>String with double quote and single quote.</p>
+    <center>
+      <pre>
+            let name = 'Vicky' // Valid 
+            let Name = "Mohan" // also Valid
+      </pre>
+    </center>
+    <hr><hr>
+  </body>
+  <script>
+    // demo-3 example function
+    function myFunction() {
+      document.getElementById("magicDiv").innerHTML = "It's Magic";
+      document.getElementById("magicDiv").style.backgroundColor = "black";
+      document.getElementById("magicDiv").style.color = "white";
+    }
+  </script>
+</html>
