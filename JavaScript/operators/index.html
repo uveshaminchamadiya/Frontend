@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operators</title>
+  </head>
+  <body>
+    <h1>There are different types of JavaScript operators:</h1>
+    <p>
+      Operators are used to assign values, compare values, perform arithmetic
+      operations, and more.
+    </p>
+    <ul>
+      <li>Arithmetic Operators</li>
+      <li>Comparison Operators</li>
+      <li>Assignment Operators</li>
+      <li>String Operators</li>
+      <li>Logical Operators</li>
+      <li>Bitwise Operators</li>
+      <li>Ternary Operators</li>
+      <li>Type Operators</li>
+    </ul>
+    <br />
+    <h3>Arithmetic Operators:</h3>
+    <p>
+      Arithmetic operators perform arithmetic on numbers (literals or
+      variables).
+    </p>
+    <button onclick="arithmeticOpetation()">Click Me!</button>
+    <b><p id="arithmeticResult"></p></b>
+    <br />
+    <h3>Ternary Operators</h3>
+    <p>
+      The conditional (ternary) operator is the only JavaScript operator that
+      takes three operands: a condition followed by a question mark ( ? ), then
+      an expression to execute if the condition is truthy followed by a colon (
+      : ), and finally the expression to execute if the condition is falsy.
+    </p>
+    <p>
+      <b>Example:</b> Using ternary operator to check if a number is even or odd
+    </p>
+    <button onclick="ternaryOperator()">Click Me!</button>
+    <b><p id="ternaryResult"></p></b>
+    <br>
+    <!-- JavaScript Script  -->
+    <script>
+      function arithmeticOpetation() {
+        // Function to perform arithmetic operations
+        function performOperation(num1, num2, operator) {
+          switch (operator) {
+            case "+":
+              return num1 + num2;
+            case "-":
+              return num1 - num2;
+            case "*":
+              return num1 * num2;
+            case "/":
+              return num1 / num2;
+            default:
+              return "Invalid operator";
+          }
+        }
+
+        // Get user input
+        var num1 = parseFloat(prompt("Enter the first number:"));
+        var num2 = parseFloat(prompt("Enter the second number:"));
+        var operator = prompt("Enter the operation (+, -, *, /):");
+
+        // Perform the operation
+        var result = performOperation(num1, num2, operator);
+
+        // Display the result
+        let result_doc = document.getElementById("arithmeticResult");
+        result_doc.innerHTML = "Result: " + result;
+      }
+      function ternaryOperator() {
+        // Prompt user for a number
+        var userInput = prompt("Enter a number:");
+
+        // Convert the user input to a number
+        var number = parseFloat(userInput);
+
+        // Check if the number is even or odd using the ternary operator
+        var result = number % 2 === 0 ? "Even" : "Odd";
+
+        // Display the result
+        let result_doc = document.getElementById("ternaryResult");
+        result_doc.innerHTML = "The number is " + result + ".";
+      }
+    </script>
+  </body>
+</html>
