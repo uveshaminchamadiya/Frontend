@@ -11,10 +11,10 @@
     <button onclick="document.getElementById('root').innerHTML='Hello World!'">
       Click To Print Hello World
     </button>
-    <center>
-      <p>Note: Output will be displayed below.</p>
-      <h1 id="root"></h1>
-    </center>
+
+    <p>Note: Output will be displayed below.</p>
+    <h1 id="root"></h1>
+
     <hr />
     <hr />
     <!-- demo-2  -->
@@ -24,26 +24,38 @@
     >
       Click To Change Value
     </button>
-    <center><h1 id="changeValue">My Original Value</h1></center>
-    <hr><hr>
+    <h1 id="changeValue">My Original Value</h1>
+    <hr />
+    <hr />
     <!-- demo-3  -->
     <h3>Below Is The Example Of JS Function - (Let's See)</h3>
     <button onclick="myFunction()">Click To See Magic</button>
-    <center>
-      <p>Note: Output will be displayed below.</p>
-      <h1 id="magicDiv" style="padding: 10px"></h1>
-    </center>
-    <hr><hr>
+
+    <p>Note: Output will be displayed below.</p>
+    <h1 id="magicDiv" style="padding: 10px"></h1>
+
+    <hr />
+    <hr />
     <!-- demo-4  -->
     <h3>Below Is The String in JS</h3>
     <p>String with double quote and single quote.</p>
-    <center>
-      <pre>
+
+    <pre>
             let name = 'Vicky' // Valid 
             let Name = "Mohan" // also Valid
-      </pre>
-    </center>
-    <hr><hr>
+      </pre
+    >
+
+    <hr />
+    <hr />
+    <!-- demo-5  -->
+    <h3>Below Is The Example Of Const in JS</h3>
+    <p><b>Note: </b>Value of const cannot be changed</p>
+    <button onclick="changeConstValue()">Change Const Value</button>
+    <p><b>Note: </b>Error will be displayed bellow.</p>
+    <p id="demo-5-error" style="color: red"></p>
+    <hr />
+    <hr />
   </body>
   <script>
     // demo-3 example function
@@ -52,5 +64,14 @@
       document.getElementById("magicDiv").style.backgroundColor = "black";
       document.getElementById("magicDiv").style.color = "white";
     }
+    // demo-5 example function
+    const changeConstValue = () => {
+      try {
+        const age = 20;
+        age = 18;
+      } catch (err) {
+        document.getElementById("demo-5-error").innerHTML = err;
+      }
+    };
   </script>
 </html>
