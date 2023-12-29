@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Method</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      button {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: greenyellow;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      #result{
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>String in JavaScript:</h1>
+    <p>
+      String is a sequence of one or more characters that may consist of
+      letters, numbers, or symbols.
+    </p>
+    <h3>
+      String can be written in single quote( 'JavaScript' ) or double quote(
+      "JavaScript" )
+    </h3>
+    <p>Let's see some of the String Methods.</p>
+    <p><b>Example:</b></p>
+    <p id="str_1">
+      This is dummy String. This is  demonstrate Python String Methods.Python has
+      sevral String Methods.
+    </p>
+    <p id="str_2">
+      We will concat this string into above String (in final output this string will be merged with above string).
+    </p>
+    <button onclick="performOperation()">Let's Begin - Click Me!</button>
+    <p id="result"></p>
+    <script>
+      function performOperation() {
+        // Get the content of the two strings
+        const string1 = document.getElementById("str_1").textContent;
+        const string2 = document.getElementById("str_2").textContent;
+
+        // Replace "Python" with "JavaScript" in string1
+        const replacedString = string1.replaceAll("Python", "JavaScript");
+
+        // Concatenate string2 to the replaced string
+        const resultString = replacedString.concat(string2);
+
+        // Display the result
+        document.getElementById("result").textContent = resultString;
+      }
+    </script>
+  </body>
+</html>
