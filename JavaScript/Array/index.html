@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+
+    <h1>Array</h1>
+    <p>It is used to store homogenous data(same datatype)</p>
+    <!-- array example one  -->
+    <hr />
+    <h3>Simple Array Example:</h3>
+    <p id="array_1"></p>
+
+    <!-- array example two - display in ul  -->
+    <hr>
+    <h3>Array elements display using unordered list</h3>
+    <p id="array_2"></p>
+
+    <!-- array example three - concat two array demo  -->
+    <hr>
+    <h3>Concat Two Array Demo Example</h3>
+    <pre>
+      const Array_1 = ["Rohan", "Rahul", "Raj"];
+      const Array_2 = ["Riya", "Ritu"];
+    </pre>
+    <p id="array_3"></p>
+
+    <!-- JavaScript Script  -->
+    <script>
+
+      // demo-1 
+      const Names = ["Rohan", "Rahul", "Raj"];
+      document.getElementById("array_1").innerHTML = Names;
+
+      // demo-2
+      let text = "<ul>";
+      for (let i = 0; i < Names.length; i++) {
+        text += "<li>" + Names[i] + "</li>";
+      }
+      text += "</ul>";
+      document.getElementById("array_2").innerHTML = text;
+
+      // demo-3 
+        const Girls = ["Riya", "Ritu"];
+        const Boys = ["Rohan", "Rahul", "Raj"];
+        const Class_12 = Girls.concat(Boys);
+
+        document.getElementById("array_3").innerHTML = Class_12;
+</script>
+    </script>
+  </body>
+</html>
