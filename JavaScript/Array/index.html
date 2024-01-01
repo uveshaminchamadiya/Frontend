@@ -1,55 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Array</title>
-  </head>
-  <body>
 
-    <h1>Array</h1>
-    <p>It is used to store homogenous data(same datatype)</p>
-    <!-- array example one  -->
-    <hr />
-    <h3>Simple Array Example:</h3>
-    <p id="array_1"></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Array</title>
+</head>
 
-    <!-- array example two - display in ul  -->
-    <hr>
-    <h3>Array elements display using unordered list</h3>
-    <p id="array_2"></p>
+<body>
 
-    <!-- array example three - concat two array demo  -->
-    <hr>
-    <h3>Concat Two Array Demo Example</h3>
-    <pre>
+  <h1>Array</h1>
+  <p>It is used to store homogenous data(same datatype)</p>
+  <!-- array example one  -->
+  <hr />
+  <h3>Simple Array Example:</h3>
+  <p id="array_1"></p>
+
+  <!-- array example two - display in ul  -->
+  <hr>
+  <h3>Array elements display using unordered list</h3>
+  <p id="array_2"></p>
+
+  <!-- array example three - concat two array demo  -->
+  <hr>
+  <h3>Concat Two Array Demo Example</h3>
+  <pre>
       const Array_1 = ["Rohan", "Rahul", "Raj"];
       const Array_2 = ["Riya", "Ritu"];
     </pre>
-    <p id="array_3"></p>
+  <p id="array_3"></p>
 
-    <!-- JavaScript Script  -->
-    <script>
+  <!-- array methods  -->
+  <hr>
+  <h3>Array Lenght Function.</h3>
+  <p id="myArray"></p>
+  <p id="array_4"></p>
 
-      // demo-1 
-      const Names = ["Rohan", "Rahul", "Raj"];
-      document.getElementById("array_1").innerHTML = Names;
+  <!-- array iteration  -->
 
-      // demo-2
-      let text = "<ul>";
-      for (let i = 0; i < Names.length; i++) {
-        text += "<li>" + Names[i] + "</li>";
-      }
-      text += "</ul>";
-      document.getElementById("array_2").innerHTML = text;
+  <!-- using forLoop  -->
+  <hr>
+  <h3>Array Iteration - Using ForEach Loop</h3>
+  <p id="array_5"></p>
 
-      // demo-3 
-        const Girls = ["Riya", "Ritu"];
-        const Boys = ["Rohan", "Rahul", "Raj"];
-        const Class_12 = Girls.concat(Boys);
+  <!-- usign map  -->
+  <hr>
+  <h3>Array Iteration - Using map function</h3>
+  <p id="array_6"></p>
 
-        document.getElementById("array_3").innerHTML = Class_12;
-</script>
-    </script>
-  </body>
+  <!-- using filter  -->
+  <hr>
+  <h3>Array Iteration - Using filter function</h3>
+  <p><b>Note: </b> Using filter on above example(val > 50)</p>
+  <p id="array_7"></p> 
+
+  <!-- JavaScript Script  -->
+  <script>
+
+    // demo-1 
+    const Names = ["Rohan", "Rahul", "Raj"];
+    document.getElementById("array_1").innerHTML = Names;
+
+    // demo-2
+    let text = "<ul>";
+    for (let i = 0; i < Names.length; i++) {
+      text += "<li>" + Names[i] + "</li>";
+    }
+    text += "</ul>";
+    document.getElementById("array_2").innerHTML = text;
+
+    // demo-3 
+    const Girls = ["Riya", "Ritu"];
+    const Boys = ["Rohan", "Rahul", "Raj"];
+    const Class_12 = Girls.concat(Boys);
+    document.getElementById("array_3").innerHTML = Class_12;
+
+    // demo-4 
+    const myArray = ["Element-1", "Element-2", "Element-3", "Element-4"];
+    let myArray_items = "<ul>";
+    for (let i = 0; i < myArray.length; i++) {
+      myArray_items += "<li>" + myArray[i] + "</li>";
+    }
+    myArray_items += "</ul>";
+    document.getElementById("myArray").innerHTML = myArray_items;
+    const size = myArray.length;
+    document.getElementById("array_4").innerHTML = 'Lenght of Above Array is : ' + size;
+
+    // demo-5 
+    const numbers = [45, 4, 9, 16, 25];
+    let txt = "";
+    numbers.forEach((value, index, array) => {
+      txt += value + " ";
+    });
+    document.getElementById("array_5").innerHTML = txt;
+
+    // demo-6
+    const num_array = [69, 44, 97, 1, 29, 51];
+    let num_array_ele = "";
+    num_array.map((value, index, array) => {
+      num_array_ele += value + " ";
+    });
+    document.getElementById("array_6").innerHTML = num_array_ele;
+
+
+    // demo-7 
+    const filtered_array = num_array.filter((val)=>{
+      return val > 50;
+    })
+    document.getElementById("array_7").innerHTML = filtered_array;
+
+  </script>
+
+</body>
+
 </html>
