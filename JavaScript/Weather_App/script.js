@@ -1,7 +1,6 @@
 const loadData = async (url, options, cityInput) => {
     document.getElementById('loader').style.display = 'block';
     document.getElementById('chart').style.display = "none";
-    document.getElementById('body').style.backgroundColor = "#aba6a6";
     try {
         const response = await fetch(url, options);
         const result = await response.json();
@@ -14,22 +13,19 @@ const loadData = async (url, options, cityInput) => {
         document.getElementById('humidity').innerText = (result.humidity + 1) + '%';
 
     } catch (error) {
+        alert('error');
         console.error('Error fetching data:', error);
 
-      
+
     } finally {
-       
         document.getElementById('loader').style.display = 'none';
         document.getElementById('chart').style.display = "block";
-        document.getElementById('body').style.backgroundColor = "#FFF";
     }
 }
 
 
 function getWeather() {
     const cityInput = document.getElementById('cityInput').value;
-    const weatherInfo = document.getElementById('weatherInfo');
-
     if (cityInput) {
         const url = `https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${cityInput}`;
         const options = {
@@ -39,22 +35,14 @@ function getWeather() {
                 'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
             }
         };
-
-        try {
-            let load = loadData(url, options, cityInput);
-            if (load) {
-                document.getElementById('userInput').style.display = "none";
-            }
-        } catch (error) {
-            console.error(error);
-        }
+        loadData(url, options, cityInput)
+        document.getElementById('userInput').style.display = "none";
     } else {
         alert('Please enter a city');
     }
 }
 
 function closeModel() {
-    console.log('close')
     document.getElementById('chart').style.display = "none";
     document.getElementById('userInput').style.display = "block";
 }

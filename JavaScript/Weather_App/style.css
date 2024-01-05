@@ -6,15 +6,15 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background: linear-gradient(to bottom, #87CEFA, #1E90FF); 
 }
 
 .weather-container {
     text-align: center;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9); 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     width: 50%;
     margin: 0px auto;
 }
@@ -24,16 +24,19 @@ body {
 }
 
 input {
-    padding: 8px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
 }
 
 button {
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
     background-color: #4caf50;
     color: #fff;
     border: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -43,10 +46,11 @@ button:hover {
 .chart {
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9);
     width: 50%;
     margin: 0px auto;
+    display: none;
 }
 
 .data-container {
@@ -57,35 +61,41 @@ button:hover {
 
 .data-container .data .item {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .data-container .data .item .title {
     font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
 }
 
 #city {
     text-transform: capitalize;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
 }
 
-#loader{
+#loader {
     position: absolute;
     display: none;
 }
 
 @media only screen and (max-width: 1000px) {
-    .weather-container {
-        width: 75%;
-    }
-    .chart {
+    .weather-container, .chart {
         width: 75%;
     }
 }
 
-@media only screen and (max-width: 1000px) {
-    .weather-container {
-        width: 100%;
-    }
-    .chart {
+@media only screen and (max-width: 500px) {
+    .weather-container, .chart {
         width: 100%;
     }
 }
