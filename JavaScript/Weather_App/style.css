@@ -15,6 +15,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: 0px auto;
 }
 
 .search-container {
@@ -43,22 +45,47 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: none;
+    width: 50%;
+    margin: 0px auto;
 }
 
-.data-container{
+.data-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.data-container .data .item{
+.data-container .data .item {
     display: flex;
 }
 
-.data-container .data .item .title{
+.data-container .data .item .title {
     font-weight: bold;
 }
 
-#city{
+#city {
     text-transform: capitalize;
+}
+
+#loader{
+    position: absolute;
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .weather-container {
+        width: 75%;
+    }
+    .chart {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .weather-container {
+        width: 100%;
+    }
+    .chart {
+        width: 100%;
+    }
 }

@@ -10,16 +10,16 @@
     <title>Weather App</title>
 </head>
 
-<body>
+<body id="body">
     <div class="container">
-        <div class="weather-container w-50 mx-auto" id="userInput">
+        <div class="weather-container" id="userInput">
             <h1 class="mb-3">Weather App</h1>
             <div class="search-container">
                 <input type="text" id="cityInput" placeholder="Enter city">
                 <button onclick="getWeather()">Get Weather</button>
             </div>
         </div>
-        <div class="chart w-50 mx-auto" id="chart">
+        <div class="chart" id="chart">
             <div class="heading h2 text-center mb-3">Weather Info</div>
             <div class="heading h3 text-center mb-3" id="city">City&nbsp;:&nbsp;----</div>
             <div class="data-container">
@@ -56,6 +56,9 @@
                 <button onclick="closeModel()" class="btn btn-danger">Close</button>
             </div>
         </div>
+    </div>
+    <div class="spinner-grow" id="loader" role="status">
+        
     </div>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
