@@ -108,3 +108,15 @@ body {
         padding: 5px;
     }
 }
+
+@media only screen and (max-width: 360px) {
+    .get-btn{
+        margin: 10px;
+    }
+     .city-input{
+        padding: 10px;
+    }
+    .get-btn{
+        padding: 10px;
+    }
+}
