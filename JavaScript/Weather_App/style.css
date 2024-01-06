@@ -23,14 +23,14 @@ body {
     margin-bottom: 20px;
 }
 
-input {
+.city-input {
     padding: 10px;
     border: none;
     border-radius: 5px;
 }
 
-button {
-    padding: 12px;
+.get-btn {
+    padding: 10px;
     cursor: pointer;
     background-color: #4caf50;
     color: #fff;
@@ -39,7 +39,7 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.get-btn:hover {
     background-color: #45a049;
 }
 
@@ -97,5 +97,14 @@ button:hover {
 @media only screen and (max-width: 500px) {
     .weather-container, .chart {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .city-input{
+        padding: 5px;
+    }
+    .get-btn{
+        padding: 5px;
     }
 }
