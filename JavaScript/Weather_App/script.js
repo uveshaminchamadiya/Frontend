@@ -20,6 +20,9 @@ const loadData = async (url, options, cityInput) => {
     } finally {
         document.getElementById('loader').style.display = 'none';
         document.getElementById('chart').style.display = "block";
+        // document.getElementsByTagName('body').style.backgroundImage = "url('img/weather-info.jpg')" 
+        document.getElementById('body').style.backgroundImage = "url('img/weather-info.jpg')"
+        // document.getElementById('body').style.backgroundColor = "red"; 
     }
 }
 
@@ -44,5 +47,6 @@ function getWeather() {
 
 function closeModel() {
     document.getElementById('chart').style.display = "none";
+    document.getElementById('body').style.backgroundImage = "url('img/home-bg.jpg')"
     document.getElementById('userInput').style.display = "block";
 }
